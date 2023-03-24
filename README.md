@@ -11,15 +11,15 @@
 
 # Descrição do projeto 
     
-    - AluraBooks é projeto de um e-commerce de livros idealizado no curso de HTML e CSS: responsividade com mobile-first a ptaforma Alura. O projeto foi desenvolvido seguindo as aulas do mesmo e tambem ao modelo proposto no Figma pelos designs  página.
+     AluraBooks é projeto de um e-commerce de livros idealizado no curso de HTML e CSS: responsividade com<br> mobile-first a ptaforma Alura. O projeto foi desenvolvido seguindo as aulas do mesmo e também ao modelo <br> proposto no Figma pelos designs  página.
 
-    As aulas abordavam os conhecimentos básicos e avançados de HTML e CSS  enquanto a página era desenvolvida utilizando do metódo de Mobile-first. 
+    As aulas abordavam os conhecimentos básicos e avançados de HTML e CSS e a implementação da <br> biblioteaca do Swipper, enquanto a página era desenvolvida utilizando do metódo de Mobile-first. 
 
     E esse é o meu resultado final.
 
 # Acesso ao projeto 
 
-[Deploy do projeto]()
+[Deploy do projeto](https://alura-books-chi-three.vercel.app/)
 
 
 # Tecnologias utilizadas
@@ -28,6 +28,7 @@
  * CSS3
  * Mobile-first
  * Figma
+ * Biblioteca Swipper
 
 # Pessoas desenvolvedoras 
 
