@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AluraBooks</title>
-
-    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Formulário de cadastro</title>
 </head>
+
 <body>
     <header class="cabecalho">
         <div class="container">
@@ -40,6 +40,8 @@
                 <a href="#" class="lista_menu-link">Desing & ux</a>
             </li>
         </ul>
+
+        
         <img src="/imgs/Logo.svg" alt="Logo da Alurabooks" class="cabecalho__logo container_imagem">
         <a href="index.html">
             <h1 class="cabecalho__titulo"><b class="cabecalho__titulo-negrito">Alura</b>Books</h1>
@@ -96,133 +98,107 @@
     </header>
 
     <section class="banner">
-        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
-        <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
-        <input type="search" name="banner__pesquisa" id="banner__pesquisa" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+        <h2 class="banner__titulo">Tela de cadastro</h2>
     </section>
 
-    <section class="carrossel">
-        <h2 class="carrossel__titulo">Ultimos lançamentos</h2>
+    <main class="principal">
+        <h2 class="principal__titulo">Dados do cadastro</h2>
 
-        <div class="carrossel__container">
-         <!-- Slider main container -->
-         <div class="swiper">
-            <!-- Additional required wrapper -->
-    
-            <!-- If we need pagination -->
-           <div class="swiper-pagination"></div>
-    
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="imgs/ApacheKafka.svg" alt="Livro sobre Apache Kafka da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Javascript.svg" alt="Livro sobre Javascript da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Liderança.svg" alt="Livro sobre Liderança em Desing da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Arquitetura.svg" alt="Livro sobre a arquitetura da programação da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Guia Front-end.svg" alt="Livro guia de front-end da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Portugol.svg" alt="Livro sobre logica de programação da Alurabooks"></div>
+        <form class="principal__formulario" id="formulario" target="_blank"
+            onsubmit="location.replace('./cadastro-finalizado.html')">
+            <h3 class="principal__subtitulo">Dados pessoais</h3>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Nome Completo</label>
+                <input name="nome" id="nome" class="campo__escrita" required />
             </div>
-             
-    
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            </div>
-
-            <div class="card">
-                <div class="card__descricao">
-                    <div class="descricao">
-                        <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
-                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
-                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
-                    </div>
-                    <img src="/imgs/Angular.svg" alt="Capa do livro Angular 11 e Firebase" class="descricao__imagem">
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="nascimento">Nascimento</label>
+                    <input name="nascimento" id="nascimento" type="date" class="campo__escrita" required />
                 </div>
-
-                <div class="botoes">
-                    <ul class="botoes__lista">
-                        <li class="botoes__item"><img src="/imgs/Favoritos.svg" alt="Favoritar livro"></li>
-                        <li class="botoes__item"><img src="/imgs/Sacola.svg" alt="Adicionar o livro ao carrinho de compras"></li>
-                    </ul>
-
-                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="telefone">Contato</label>
+                    <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita"
+                        required />
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="carrossel">
-        <h2 class="carrossel__titulo">Mais vendidos</h2>
-
-        <div class="carrossel__container">
-         <!-- Slider main container -->
-         <div class="swiper">
-            <!-- Additional required wrapper -->
-    
-            <!-- If we need pagination -->
-           <div class="swiper-pagination"></div>
-    
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="imgs/ApacheKafka.svg" alt="Livro sobre Apache Kafka da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Javascript.svg" alt="Livro sobre Javascript da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/Liderança.svg" alt="Livro sobre Liderança em Desing da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/MEAN.svg" alt="Livro sobre MEAN da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/MetricasAgeis.svg" alt="Livro sobre metricas ágeis da Alurabooks"></div>
-                <div class="swiper-slide"><img src="imgs/ReactNative.svg" alt="Livro sobre React Native da Alurabooks"></div>
-            </div>
-             
-    
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="email">E-mail</label>
+                <input name="email" id="email" type="email" class="campo__escrita" required />
             </div>
 
-            <div class="card">
-                <div class="card__descricao">
-                    <div class="descricao">
-                        <img src="/imgs/Estrelinhas.svg" alt="Classificação do autor em estrelas">
-                        <h3 class="descricao__titulo">Autora do mês</h3>
-                        <h2 class="descricao__titulo-livro">Juliana Agarikov</h2>
-                        <p class="descricao__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
-                    </div>
-                    <img src="/imgs/Perfil-escritora 1.svg" alt="Foto de perfil da autora do mês" class="descricao__imagem">
+            <h3 class="principal__subtitulo">Endereço</h3>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="cep">CEP</label>
+                <input name="cep" id="cep" class="campo__escrita" required />
+                <div id="erro" class="formulario__erro"></div>
+            </div>
+
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="endereco">Endereço</label>
+                <input name="endereco" id="endereco" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="numero">Numero</label>
+                    <input name="numero" id="numero" class="campo__escrita" required />
                 </div>
-
-                <div class="botoes">
-                    <ul class="botoes__lista">
-                        <li class="botoes__item"><img src="/imgs/Favoritos.svg" alt="Favoritar livro"></li>
-                        <li class="botoes__item"><img src="/imgs/Sacola.svg" alt="Adicionar o livro ao carrinho de compras"></li>
-                    </ul>
-
-                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="complemento">Complemento</label>
+                    <input name="complemento" id="complemento" class="campo__escrita" />
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="formulario__campo">
+                <label class="campo__etiqueta" for="bairro">Bairro</label>
+                <input name="bairro" id="bairro" class="campo__escrita" required />
+            </div>
+            <div class="formulario__dupla">
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="cidade">Cidade</label>
+                    <input name="cidade" id="cidade" class="campo__escrita" required />
+                </div>
 
-    <section class="topicos">
-        <h2 class="topicos__titulo">tópicos visitados recentemente</h2>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="estado">UF</label>
+                    <select id="estado" name="estado" class="campo__escrita">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
 
-        <ul class="topicos__lista">
-            <li class="topicos__item"><a href="#" class="topicos__link">Android</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">Marketing Digital</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">Agile</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">Startups</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">HTML e CSS</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">Python</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">OO</a></li>
-            <li class="topicos__item"><a href="#" class="topicos__link">Java</a></li>
-        </ul>
-    </section>
-    
-    <section class="contato">
-        <div class="contato__descricao">
-            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-            <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
-        </div>
-     
-        <input type="email"  id="contato__email" class="contato__email" placeholder="Cadastre o seu email.">
-    </section>
+            </div>
+
+
+            <input type="submit" value="Enviar formulário" class="formulario__botao" id="enviar">
+        </form>
+    </main>
 
     <hr>
 
@@ -305,16 +281,8 @@
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-        spaceBetween: 10,
-      slidesPerView: 3,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        },
-        });
-    </script>
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
