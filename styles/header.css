@@ -71,12 +71,15 @@
 }
 
 .lista_menu-link {
+    background: var(--azul-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background: var(--azul-degrade);
     background-clip: text;
     text-transform: uppercase;
+}
 
+.lista_menu-item:hover > .lista_menu-link {
+    -webkit-text-fill-color: var(--branco);
 }
 
 .cabecalho__titulo {
