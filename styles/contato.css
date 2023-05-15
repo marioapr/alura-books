@@ -5,9 +5,9 @@
 
 .contato__titulo, 
 .contato__texto {
+    background: var(--azul-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background: var(--azul-degrade);
     background-clip: text;
 }
 
