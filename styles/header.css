@@ -98,6 +98,20 @@
     cursor: pointer;
 }
 
+.lista_cadastro {
+    position: absolute;
+    right: 0;
+}
+
+.cadastro__botao:checked ~ .lista_cadastro {
+    display: block;
+    width: auto;
+}
+
+.cadastro__botao {
+    display: none;
+}
+
 @media screen and (min-width:1024px) {
 
     .cabecalho {
@@ -157,13 +171,8 @@
         display: none;
     }
 
-    .cadastro__botao:checked ~ .lista_cadastro {
-        display: block;
-        width: auto;
-    }
-
-    .cadastro__botao {
-        display: none;
+    .lista_cadastro {
+       right: inherit;
     }
 }
 
